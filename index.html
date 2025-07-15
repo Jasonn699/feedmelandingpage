@@ -3,23 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant POS System - FeedMe</title>
+    <meta name="description" content="Modernize your restaurant with FeedMe POS System. Complete restaurant management solution with inventory tracking, payment processing, and real-time analytics. Get your free demo today!" />
+    <meta name="keywords" content="POS system, restaurant management, point of sale, inventory management, restaurant software, Malaysia POS" />
+    <meta name="author" content="FeedMe POS System" />
+    <meta property="og:title" content="FeedMe POS System - Modern Restaurant Management" />
+    <meta property="og:description" content="Transform your restaurant operations with our comprehensive POS solution. Get your free demo today!" />
+    <meta property="og:type" content="website" />
+    <title>FeedMe POS System - Modernize Your Restaurant with FeedMe</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%23333' stroke-width='3'/><circle cx='50' cy='50' r='35' fill='none' stroke='%23333' stroke-width='2'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23333' stroke-width='1'/><line x1='20' y1='50' x2='80' y2='50' stroke='%23333' stroke-width='2'/><line x1='50' y1='20' x2='50' y2='80' stroke='%23333' stroke-width='2'/></svg>">
+    <link rel="shortcut icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%23333' stroke-width='3'/><circle cx='50' cy='50' r='35' fill='none' stroke='%23333' stroke-width='2'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23333' stroke-width='1'/><line x1='20' y1='50' x2='80' y2='50' stroke='%23333' stroke-width='2'/><line x1='50' y1='20' x2='50' y2='80' stroke='%23333' stroke-width='2'/></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%23333' stroke-width='3'/><circle cx='50' cy='50' r='35' fill='none' stroke='%23333' stroke-width='2'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23333' stroke-width='1'/><line x1='20' y1='50' x2='80' y2='50' stroke='%23333' stroke-width='2'/><line x1='50' y1='20' x2='50' y2='80' stroke='%23333' stroke-width='2'/></svg>">
   </head>
   <body>
     <!-- Header -->
     <header>
       <div class="container">
         <div class="header-content">
-          <div class="logo">FeedMe POS</div>
+          <div class="logo">
+            <img src="img/poslogo.jpg" alt="Pos Logo" />
+            Restaurant Pos System
+          </div>
           <nav>
             <ul class="nav-links">
-              <li><a href="#intro">Introduction</a></li>
-              <li><a href="#demo">Demo</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#demo" data-en="Demo" data-bm="Demo" data-zh="演示">Demo</a></li>
+              <li><a href="#products" data-en="Products" data-bm="Produk" data-zh="產品">Products</a></li>
+              <li><a href="#testimonials" data-en="Testimonials" data-bm="Testimoni" data-zh="客戶評價">Testimonials</a></li>
+              <li><a href="#faq" data-en="FAQ" data-bm="Soalan Lazim" data-zh="常見問題">FAQ</a></li>
+              <li><a href="#contact" data-en="Contact" data-bm="Hubungi" data-zh="聯絡我們">Contact</a></li>
             </ul>
           </nav>
+          <div class="language-switcher">
+            <select id="lang-select" class="lang-select">
+              <option value="en">EN</option>
+              <option value="bm">BM</option>
+              <option value="zh">中文</option>
+            </select>
+          </div>
+          <a href="#contact" class="header-cta" data-en="Get a Demo" data-bm="Dapatkan Demo" data-zh="獲取演示">Get a Demo</a>
         </div>
       </div>
     </header>
@@ -27,181 +48,285 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h1>Restaurant POS System</h1>
+        <h1 data-en="All-in-One F&B POS System to Run, Grow & Scale Your Business" data-bm="Sistem POS F&B Serba Lengkap untuk Mengurus, Mengembangkan & Menskalakan Perniagaan Anda" data-zh="一体化餐饮POS系统，助您运营、成长与扩展业务">All-in-One F&B POS System to Run, Grow & Scale Your Business</h1>
         <p>
-          Introducing FeedMe - The Ultimate Point of Sale Solution for Modern
-          Restaurants
+          <i data-en="From kitchen display to loyalty programs, delivery integration, e-Invoicing & AI — manage everything in one platform." data-bm="Dari paparan dapur ke program kesetiaan, integrasi penghantaran, e-Invois & AI — urus semuanya dalam satu platform." data-zh="从厨房显示到会员计划、外卖整合、电子发票与AI——一站式平台全搞定。">From kitchen display to loyalty programs, delivery integration, e-Invoicing & AI — manage everything in one platform.</i>
         </p>
-        <a href="#contact" class="cta-button">Get Started Today</a>
+        <a href="#contact" class="cta-button" data-en="Get Started Today" data-bm="Mulakan Hari Ini" data-zh="立即開始">Get Started Today</a>
       </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <!-- Introduction Section -->
-      <section id="intro" class="section">
+    <!-- Core Benefits Section -->
+    <section class="section core-benefits">
+      <div class="container">
+        <h2 data-en="Core Benefits" data-bm="Manfaat Teras" data-zh="核心优势"><span class="highlight-orange" data-en="Core" data-bm="Teras" data-zh="核心">Core</span> <span data-en="Benefits" data-bm="Manfaat" data-zh="优势">Benefits</span></h2>
+        <p class="section-subtitle" data-en="A quick snapshot of our value for your restaurant" data-bm="Gambaran ringkas nilai kami untuk restoran anda" data-zh="为您的餐厅带来的价值一览">A quick snapshot of our value for your restaurant</p>
+        <div class="core-benefits-columns">
+          <!-- Operate Efficiently -->
+          <div class="core-benefit-card core-benefit-green">
+            <div class="core-benefit-icon">✔️</div>
+            <h3 data-en="Operate Efficiently" data-bm="Beroperasi dengan Efisien" data-zh="高效运营">Operate Efficiently</h3>
+            <div class="core-benefit-list">
+              <div data-en="Kitchen Display System" data-bm="Sistem Paparan Dapur" data-zh="厨房显示系统">Kitchen Display System</div>
+              <div data-en="Delivery Integration" data-bm="Integrasi Penghantaran" data-zh="外卖整合">Delivery Integration</div>
+              <div data-en="Inventory & Stock Control" data-bm="Kawalan Inventori & Stok" data-zh="库存与存货管理">Inventory & Stock Control</div>
+            </div>
+          </div>
+          <!-- Boost Sales & Loyalty -->
+          <div class="core-benefit-card core-benefit-yellow">
+            <div class="core-benefit-icon">✔️</div>
+            <h3 data-en="Boost Sales & Loyalty" data-bm="Tingkatkan Jualan & Kesetiaan" data-zh="提升销售与忠诚度">Boost Sales & Loyalty</h3>
+            <div class="core-benefit-list">
+              <div data-en="AI Menu & Promotions" data-bm="Menu & Promosi AI" data-zh="AI菜单与促销">AI Menu & Promotions</div>
+              <div data-en="QR Ordering" data-bm="Pesanan QR" data-zh="二维码点餐">QR Ordering</div>
+              <div data-en="Membership + Vouchers" data-bm="Keahlian + Baucar" data-zh="会员+优惠券">Membership + Vouchers</div>
+            </div>
+          </div>
+          <!-- Make Smarter Decisions -->
+          <div class="core-benefit-card core-benefit-blue">
+            <div class="core-benefit-icon">✔️</div>
+            <h3 data-en="Make Smarter Decisions" data-bm="Buat Keputusan Lebih Bijak" data-zh="更明智决策">Make Smarter Decisions</h3>
+            <div class="core-benefit-list">
+              <div data-en="Real-Time Reports" data-bm="Laporan Masa Nyata" data-zh="实时报告">Real-Time Reports</div>
+              <div data-en="Forecasting & Costing" data-bm="Ramalan & Pengiraan Kos" data-zh="预测与成本计算">Forecasting & Costing</div>
+              <div data-en="AI Insight Engine" data-bm="Enjin Cerapan AI" data-zh="AI洞察引擎">AI Insight Engine</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Statistics Section -->
+      <section id="stats" class="section">
+        <div class="container stats-modern">
+          <h2 class="stats-heading" data-en="Trusted by 10,000++ Merchants" data-bm="Dipercayai oleh 10,000++ Peniaga" data-zh="获得 10,000++ 商户信赖">
+            Trusted by <span class="highlight-orange" data-en="10,000++ Merchants" data-bm="10,000++ Peniaga" data-zh="10,000++ 商户">10,000++ Merchants</span>
+          </h2>
+        <p class="section-subtitle" data-en="Ideal match for every type of restaurant." data-bm="Padanan ideal untuk setiap jenis restoran." data-zh="适合各种类型餐厅。">Ideal match for every type of restaurant.</p>
+          <div class="merchant-logos">
+            <div class="merchant-logo"><img src="https://www.papparotifranchise.com/wp-content/uploads/2022/02/open-graph-logo-1200x630-1.png" alt="Pappa Roti" /></div>
+            <div class="merchant-logo"><img src="https://kyochon.com.my/wp-content/uploads/2022/08/kyochon-logo-korea.png" alt="KyoChon 1991" /></div>
+            <div class="merchant-logo"><img src="https://tropicanagardensmall.com.my/uploads/shops/qVnrOL8xuZDynIuYsd7UXWaq944hxJUa4hcdg5DY.jpeg" alt="Shuguo Hotpot" /></div>
+            <div class="merchant-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLU64dv7x8Ll8_8INpHV7l0ZA0OzVPIYBvPQ&s" alt="Hock Kee Kopitiam" /></div>
+            <div class="merchant-logo"><img src="https://brandlogos.net/wp-content/uploads/2025/04/mixue-logo_brandlogos.net_wijie.png" alt="Mixue" /></div>
+            <div class="merchant-logo"><img src="https://cdn.aeonmallmy.com/web-cms/tenant-listings/IJ3Ipl2fSv4x8NXd3SdonYdQwD6T0rN8oJmiQlfe.png?token=rNf6g7mT5frA0gRBXjA8xQ&expires=1752396481" alt="Jom Cha" /></div>
+            <div class="merchant-logo"><img src="https://www.sunwaypyramid.com/static/shops/87f311cde094497ceb7504241972ab27/w768.png" alt="Palsak" /></div>
+            <div class="merchant-logo"><img src="https://www.sunwaycarnival.com/static/shops/ac729ab866b90fccc11cdd374ad73a16/w768.png" alt="Penang Chendul" /></div>
+            <div class="merchant-logo"><img src="https://scontent.fmkz1-1.fna.fbcdn.net/v/t39.30808-6/309711678_514270407378285_1213792349297776211_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=qobG-lRNkSEQ7kNvwEMLFWX&_nc_oc=AdmaDE4N_-vlCyiaZ_etDQsEuOVvKHRRcm3r7PQFfXvP5Hcdj7PC1dwi1yFDL-MYXFY&_nc_zt=23&_nc_ht=scontent.fmkz1-1.fna&_nc_gid=JM1piANj7QVcqAgFWeq6dw&oh=00_AfSEE5rsYgxotIZaWljcrnJkOBDK8pgfRybYtCy6U7LoZA&oe=687A8C11" alt="The Toast" /></div>
+            <div class="merchant-logo"><img src="https://scontent.fmkz1-2.fna.fbcdn.net/v/t39.30808-6/341070412_175936148643141_8987614755319458915_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=w__RwPdrF2AQ7kNvwGYOZWB&_nc_oc=AdklugRmXIDp1-DfF68-ZLqBGtQRIXL3Nqkugp8je_QLAbZXNjW-ElVjbS8L6Q3cZAs&_nc_zt=23&_nc_ht=scontent.fmkz1-2.fna&_nc_gid=IXWoTYj6bn72vpA1r_Hs2w&oh=00_AfR09CkHuIrOmbo6EEQPa_dGj1LhsUntrLXzGHfTUIjjSA&oe=687A9E85" alt="Sushi Plus" /></div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Feature Highlights Section (Sidebar Selection) -->
+    <section class="section feature-blocks">
+      <div class="container">
+        <h2 data-en="Feature Highlights" data-bm="Sorotan Ciri" data-zh="功能亮点"><span class="highlight-orange" data-en="Feature" data-bm="Ciri" data-zh="功能">Feature</span> <span data-en="Highlights" data-bm="Sorotan" data-zh="亮点">Highlights</span></h2>
+        <p class="section-subtitle" data-en="All the tools you need to run and grow your F&B business." data-bm="Semua alat yang anda perlukan untuk mengurus dan mengembangkan perniagaan F&B anda。" data-zh="助您运营和发展餐饮业务的全套工具。">All the tools you need to run and grow your F&B business.<br><span class="feature-instruction" data-en="Select a feature category to see details and a demo video." data-bm="Pilih kategori ciri untuk melihat butiran dan video demo." data-zh="选择功能类别以查看详情和演示视频。">Select a feature category to see details and a demo video.</span></p>
+        <div class="feature-blocks-flex">
+          <div class="feature-sidebar">
+            <button class="feature-tab active" data-feature="operations" data-en="Operations & Control" data-bm="Operasi & Kawalan" data-zh="运营与控制"><span class="feature-tab-icon">🛠️</span><span class="highlight-orange" data-en="Operations" data-bm="Operasi" data-zh="运营">Operations</span> & Control</button>
+            <button class="feature-tab" data-feature="sales" data-en="Sales & Marketing" data-bm="Jualan & Pemasaran" data-zh="销售与营销"><span class="feature-tab-icon">💡</span><span class="highlight-orange" data-en="Sales" data-bm="Jualan" data-zh="销售">Sales</span> & Marketing</button>
+            <button class="feature-tab" data-feature="ai" data-en="AI Empowerment" data-bm="Enjin Cerapan AI" data-zh="AI赋能"><span class="feature-tab-icon">🤖</span><span class="highlight-orange" data-en="AI" data-bm="AI" data-zh="AI">AI</span> Empowerment</button>
+            <button class="feature-tab" data-feature="branding" data-en="Branding & Customer Experience" data-bm="Pengiklanan & Pengalaman Pelanggan" data-zh="品牌与客户体验"><span class="feature-tab-icon">🎨</span><span class="highlight-orange" data-en="Branding" data-bm="Pengiklanan" data-zh="品牌">Branding</span> & Customer Experience</button>
+            <button class="feature-tab" data-feature="reporting" data-en="Reporting & Insights" data-bm="Laporan & Cerapan" data-zh="报告与洞察"><span class="feature-tab-icon">📊</span><span class="highlight-orange" data-en="Reporting" data-bm="Laporan" data-zh="报告">Reporting</span> & Insights</button>
+            <button class="feature-tab" data-feature="member" data-en="Member Store & Engagement" data-bm="Toko Ahli & Pengiklanan" data-zh="会员商店与互动"><span class="feature-tab-icon">🛒</span><span class="highlight-orange" data-en="Member" data-bm="Ahli" data-zh="会员">Member</span> Store & Engagement</button>
+          </div>
+          <div class="feature-details-panel">
+            <!-- OPERATIONS & CONTROL -->
+            <div class="feature-details active" id="feature-operations">
+              <h3 data-en="Operations & Control" data-bm="Operasi & Kawalan" data-zh="运营与控制">Operations & Control</h3>
+              <p class="feature-block-desc" data-en="Run your kitchen and store operations smoothly." data-bm="Jalankan operasi dapur dan kedai anda dengan lancar." data-zh="让您的厨房和门店运营顺畅。">Run your kitchen and store operations smoothly.</p>
+              <div class="feature-demo-video-inner">
+                <iframe src="https://www.youtube.com/embed/6U42t9MJo7A" title="Operations Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="feature-list">
+                <div class="feature-list-item" data-en="Kitchen Display System – streamline kitchen orders" data-bm="Sistem Paparan Dapur – memudahkan pesanan dapur" data-zh="厨房显示系统 – 简化厨房订单">✔️ Kitchen Display System – streamline kitchen orders</div>
+                <div class="feature-list-item" data-en="Delivery Integration – auto-sync Grab/Foodpanda orders" data-bm="Integrasi Penghantaran – auto-sync pesanan Grab/Foodpanda" data-zh="外卖整合 – 自动同步 Grab/Foodpanda 订单">✔️ Delivery Integration – auto-sync Grab/Foodpanda orders</div>
+                <div class="feature-list-item" data-en="Inventory & BOM – track ingredients, avoid waste" data-bm="Inventori & BOM – jejak bahan, elak pembaziran" data-zh="库存与BOM – 跟踪原料，减少浪费">✔️ Inventory & BOM – track ingredients, avoid waste</div>
+                <div class="feature-list-item" data-en="Purchase Order – order from suppliers efficiently" data-bm="Pesanan Pembelian – pesan dari pembekal dengan cekap" data-zh="采购订单 – 高效向供应商下单">✔️ Purchase Order – order from suppliers efficiently</div>
+                <div class="feature-list-item" data-en="Warehouse & SKU Management – ideal for multiple outlets" data-bm="Pengurusan Gudang & SKU – sesuai untuk banyak cawangan" data-zh="仓库与SKU管理 – 适合多门店">✔️ Warehouse & SKU Management – ideal for multiple outlets</div>
+                <div class="feature-list-item" data-en="Sub POS – add stations to reduce wait times" data-bm="Sub POS – tambah stesen untuk kurangkan masa menunggu" data-zh="子POS – 增加工作站减少等待">✔️ Sub POS – add stations to reduce wait times</div>
+                <div class="feature-list-item" data-en="Table Management – optimize floor plan & seating" data-bm="Pengurusan Meja – optimumkan pelan lantai & tempat duduk" data-zh="桌位管理 – 优化布局与座位">✔️ Table Management – optimize floor plan & seating</div>
+              </div>
+            </div>
+            <!-- SALES & MARKETING -->
+            <div class="feature-details" id="feature-sales">
+              <h3 data-en="Sales & Marketing" data-bm="Jualan & Pemasaran" data-zh="销售与营销">Sales & Marketing</h3>
+              <p class="feature-block-desc" data-en="Grow revenue with smart promotions & loyalty." data-bm="Tingkatkan jualan dengan promosi & kesetiaan yang bijak." data-zh="通过智能促销和忠诚度提升收入。">Grow revenue with smart promotions & loyalty.</p>
+              <div class="feature-demo-video-inner">
+                <iframe src="https://www.youtube.com/embed/6U42t9MJo7A" title="Sales Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="feature-list">
+                <div class="feature-list-item" data-en="Loyalty Tiers – reward regulars, increase repeat visits" data-bm="Tingkat Keahlian – beri ganjaran kepada pelanggan biasa, tingkatkan kunjungan berulang" data-zh="忠诚度等级 – 奖励常客，增加回头客">✔️ Loyalty Tiers – reward regulars, increase repeat visits</div>
+                <div class="feature-list-item" data-en="Vouchers & Credit – attract, engage and convert" data-bm="Baucar & Kredit – menarik, berinteraksi dan menukar" data-zh="优惠券与积分 – 吸引、互动并转化">✔️ Vouchers & Credit – attract, engage and convert</div>
+                <div class="feature-list-item" data-en="Campaign Rules – target by birthday, last visit, gender, etc." data-bm="Peraturan Kampagne – targetkan oleh ulang tahun, kunjungan terakhir, jantina, dll." data-zh="活动规则 – 按生日、最后访问、性别等进行定位">✔️ Campaign Rules – target by birthday, last visit, gender, etc.</div>
+                <div class="feature-list-item" data-en="Points + Cashback – give customers more reason to return" data-bm="Titik + Cashback – beri pelanggan lebih banyak alasan untuk kembali" data-zh="积分与现金返现 – 为顾客提供更多回头理由">✔️ Points + Cashback – give customers more reason to return</div>
+                <div class="feature-list-item" data-en="Gamification – interactive campaigns" data-bm="Gamifikasi – kampagne interaktif" data-zh="游戏化 – 互动活动">✔️ Gamification – interactive campaigns</div>
+                <div class="feature-list-item" data-en="SMS / EDM Broadcast – notify customers instantly" data-bm="SMS / EDM Broadcast – beri pemberitahuan kepada pelanggan secara instan" data-zh="短信/EDM广播 – 即时通知顾客">✔️ SMS / EDM Broadcast – notify customers instantly</div>
+              </div>
+            </div>
+            <!-- AI EMPOWERMENT -->
+            <div class="feature-details" id="feature-ai">
+              <h3 data-en="AI Empowerment" data-bm="Enjin Cerapan AI" data-zh="AI赋能">AI Empowerment <span class="coming-soon">(Coming Soon)</span></h3>
+              <p class="feature-block-desc" data-en="Turn your data into real business results." data-bm="Tukar data anda menjadi hasil perniagaan sebenar." data-zh="将您的数据转化为真实业务结果。">Turn your data into real business results.</p>
+              <div class="feature-demo-video-inner">
+                <iframe src="https://www.youtube.com/embed/6U42t9MJo7A" title="AI Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="feature-list">
+                <div class="feature-list-item" data-en="AI Menu Creation & Recommendation" data-bm="Penciptaan Menu & Rekomendasi AI" data-zh="AI菜单创建与推荐">✔️ AI Menu Creation & Recommendation</div>
+                <div class="feature-list-item" data-en="Forecasting Sales & Inventory" data-bm="Ramalan Jualan & Inventori" data-zh="预测销售与库存">✔️ Forecasting Sales & Inventory</div>
+                <div class="feature-list-item" data-en="Auto Discount for Expiring Stock" data-bm="Diskaun Auto untuk Stok Berhampiran Tamat" data-zh="自动折扣即将过期库存">✔️ Auto Discount for Expiring Stock</div>
+                <div class="feature-list-item" data-en="Smart Cost & Margin Setting" data-bm="Tetapan Kos & Marjin Pintas" data-zh="智能成本与利润设置">✔️ Smart Cost & Margin Setting</div>
+                <div class="feature-list-item" data-en="AI Insight Report Engine – see & understand your numbers" data-bm="Enjin Cerapan AI – lihat & fahami nombor anda" data-zh="AI洞察报告引擎 – 查看并理解您的数据">✔️ AI Insight Report Engine – see & understand your numbers</div>
+              </div>
+            </div>
+            <!-- BRANDING & CUSTOMER EXPERIENCE -->
+            <div class="feature-details" id="feature-branding">
+              <h3 data-en="Branding & Customer Experience" data-bm="Pengiklanan & Pengalaman Pelanggan" data-zh="品牌与客户体验">Branding & Customer Experience</h3>
+              <p class="feature-block-desc" data-en="Look professional. Be unforgettable." data-bm="Kelihatan profesional. Jadi tak terlupa." data-zh="看起来专业。难以忘怀。">Look professional. Be unforgettable.</p>
+              <div class="feature-demo-video-inner">
+                <iframe src="https://www.youtube.com/embed/6U42t9MJo7A" title="Branding Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="feature-list">
+                <div class="feature-list-item" data-en="Branded Mini Program (add to home screen like an app)" data-bm="Program Mini Branded (tambah ke layar rumah seperti aplikasi)" data-zh="品牌小程序（添加到首页像应用）">✔️ Branded Mini Program (add to home screen like an app)</div>
+                <div class="feature-list-item" data-en="Brand Kit – match your logo, color, and vibe" data-bm="Kit Brand – sepadan dengan logo, warna, dan suara" data-zh="品牌套装 – 匹配您的品牌、颜色和风格">✔️ Brand Kit – match your logo, color, and vibe</div>
+                <div class="feature-list-item" data-en="Custom Template Builder – full drag & drop" data-bm="Pembina Templat Kustom – tarik & jatuh" data-zh="自定义模板构建器 – 全拖拽">✔️ Custom Template Builder – full drag & drop</div>
+                <div class="feature-list-item" data-en="Custom Domain <span class="coming-soon">(Coming Soon)</span>" data-bm="Domain Kustom <span class="coming-soon">(Coming Soon)</span>" data-zh="自定义域名 <span class="coming-soon">(Coming Soon)</span>">✔️ Custom Domain <span class="coming-soon">(Coming Soon)</span></div>
+                <div class="feature-list-item" data-en="Link to Menu & Member Store – smooth navigation" data-bm="Pautan ke Menu & Toko Ahli – navigasi yang halus" data-zh="菜单与会员商店链接 – 流畅导航">✔️ Link to Menu & Member Store – smooth navigation</div>
+                <div class="feature-list-item" data-en="Digital Menu, QR Ordering, Kiosk-ready" data-bm="Menu Digital, Pesanan QR, Siap untuk Kiosk" data-zh="数字菜单、二维码点餐、Kiosk就绪">✔️ Digital Menu, QR Ordering, Kiosk-ready</div>
+              </div>
+            </div>
+            <!-- REPORTING & INSIGHTS -->
+            <div class="feature-details" id="feature-reporting">
+              <h3 data-en="Reporting & Insights" data-bm="Laporan & Cerapan" data-zh="报告与洞察">Reporting & Insights</h3>
+              <p class="feature-block-desc" data-en="Know what’s working — and what’s not." data-bm="Ketahui apa yang berfungsi — dan apa yang tidak." data-zh="了解哪些有效，哪些无效。">Know what’s working — and what’s not.</p>
+              <div class="feature-demo-video-inner">
+                <iframe src="https://www.youtube.com/embed/6U42t9MJo7A" title="Reporting Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="feature-list">
+                <div class="feature-list-item" data-en="Preset Reports – sales, inventory, operations" data-bm="Laporan Tetap – jualan, inventori, operasi" data-zh="预设报告 – 销售、库存、运营">✔️ Preset Reports – sales, inventory, operations</div>
+                <div class="feature-list-item" data-en="Custom Reports – slice data any way you need" data-bm="Laporan Kustom – potong data dengan cara anda perlukan" data-zh="自定义报告 – 按需切片数据">✔️ Custom Reports – slice data any way you need</div>
+                <div class="feature-list-item" data-en="Real-Time Sales Dashboard" data-bm="Papan Pemantauan Jualan Masa Nyata" data-zh="实时销售仪表板">✔️ Real-Time Sales Dashboard</div>
+                <div class="feature-list-item" data-en="Scheduled Auto Reports" data-bm="Laporan Auto Berkala" data-zh="定时自动报告">✔️ Scheduled Auto Reports</div>
+                <div class="feature-list-item" data-en="Punch Card & Staff Role Tracking" data-bm="Kad Serbu & Pengurusan Peranan Staf" data-zh="打卡与员工角色追踪">✔️ Punch Card & Staff Role Tracking</div>
+              </div>
+            </div>
+            <!-- MEMBER STORE & ENGAGEMENT -->
+            <div class="feature-details" id="feature-member">
+              <h3 data-en="Member Store & Engagement" data-bm="Toko Ahli & Pengiklanan" data-zh="会员商店与互动">Member Store & Engagement</h3>
+              <p class="feature-block-desc" data-en="Monetize loyalty and upsell smarter." data-bm="Monetisasi kesetiaan dan upsell dengan bijak." data-zh="通过忠诚度和更聪明的销售来变现。">Monetize loyalty and upsell smarter.</p>
+              <div class="feature-demo-video-inner">
+                <iframe src="https://www.youtube.com/embed/6U42t9MJo7A" title="Member Store Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="feature-list">
+                <div class="feature-list-item" data-en="Online/Offline Member Store" data-bm="Toko Ahli Online/Offline" data-zh="在线/离线会员商店">✔️ Online/Offline Member Store</div>
+                <div class="feature-list-item" data-en="Sell Vouchers, Credits, Gift Cards" data-bm="Jual Baucar, Kredit, Kad Hadiah" data-zh="销售优惠券、积分、礼品卡">✔️ Sell Vouchers, Credits, Gift Cards</div>
+                <div class="feature-list-item" data-en="Personalized Campaigns by segment" data-bm="Kampagne Personalisasi Berdasarkan Segmen" data-zh="个性化按细分市场活动">✔️ Personalized Campaigns by segment</div>
+                <div class="feature-list-item" data-en="Member Title Management" data-bm="Pengurusan Tanda Ahli" data-zh="会员等级管理">✔️ Member Title Management</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="feature-tabs.js"></script>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="section modern-section">
         <div class="container">
-          <h2>Introduction</h2>
-          <div class="section-content">
-            <div class="intro-text">
-              <p>
-                Welcome to FeedMe, the revolutionary Point of Sale system
-                designed specifically for the modern restaurant industry. Our
-                comprehensive solution combines cutting-edge technology with
-                intuitive design to streamline your operations and enhance
-                customer experience.
-              </p>
-
-              <p>
-                FeedMe POS System offers a complete suite of features including
-                order management, inventory tracking, payment processing,
-                customer relationship management, and detailed analytics.
-                Whether you're running a small café or a large restaurant chain,
-                FeedMe provides the tools you need to succeed in today's
-                competitive market.
-              </p>
-
-              <p>
-                Our platform is built with scalability in mind, ensuring that
-                your POS system grows with your business. With cloud-based
-                technology, you can access your data from anywhere, manage
-                multiple locations seamlessly, and make informed decisions based
-                on real-time insights.
-              </p>
+          <h2 data-en="What Our Customers Say" data-bm="Apa Kata Pelanggan Kami" data-zh="客户评价"><span data-en="What Our" data-bm="Apa Kata" data-zh="客户">What Our</span> <span class="highlight-orange" data-en="Customers" data-bm="Pelanggan" data-zh="客户">Customers</span> <span data-en="Say" data-bm="Kami" data-zh="评价">Say</span></h2>
+          <p class="section-subtitle" data-en="Hear from successful merchants using FeedMe." data-bm="Dengar daripada peniaga berjaya yang menggunakan FeedMe." data-zh="听听成功商户的评价。">Hear from successful merchants using FeedMe.</p>
+          <div class="testimonials-container">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p data-en='"FeedMe POS has completely transformed our restaurant operations. The inventory management feature alone has saved us 30% on food costs!"' data-bm='"FeedMe POS telah mengubah sepenuhnya operasi restoran kami. Ciri pengurusan inventori sahaja telah menjimatkan 30% kos makanan kami!"' data-zh='“FeedMe POS 完全改變了我們的餐廳營運。僅庫存管理功能就為我們節省了30%的食材成本！”'>"FeedMe POS has completely transformed our restaurant operations. The inventory management feature alone has saved us 30% on food costs!"</p>
+                <div class="testimonial-author">
+                  <strong>Sarah Chen</strong>
+                  <span>Owner, Golden Dragon Restaurant</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p data-en='"The mobile app is fantastic! Our servers can take orders from anywhere in the restaurant. Customer satisfaction has increased dramatically."' data-bm='"Aplikasi mudah alih sangat hebat! Pelayan kami boleh mengambil pesanan dari mana-mana sahaja di restoran. Kepuasan pelanggan meningkat dengan ketara."' data-zh='“移動應用非常棒！我們的服務員可以在餐廳任何地方下單。客戶滿意度大幅提升。”'>"The mobile app is fantastic! Our servers can take orders from anywhere in the restaurant. Customer satisfaction has increased dramatically."</p>
+                <div class="testimonial-author">
+                  <strong>Mohammed Ali</strong>
+                  <span>Manager, Spice Garden Café</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p data-en='"Real-time reporting gives us insights we never had before. We can now make data-driven decisions to grow our business."' data-bm='"Laporan masa nyata memberi kami cerapan yang tidak pernah kami miliki sebelum ini. Kini kami boleh membuat keputusan berasaskan data untuk mengembangkan perniagaan."' data-zh='“實時報告為我們帶來了前所未有的洞察。我們現在可以基於數據做出業務決策。”'>"Real-time reporting gives us insights we never had before. We can now make data-driven decisions to grow our business."</p>
+                <div class="testimonial-author">
+                  <strong>Lisa Wong</strong>
+                  <span>CEO, Fusion Kitchen Chain</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Demo Video Section -->
-      <section id="demo" class="section">
+      <!-- FAQ Section -->
+      <section id="faq" class="section modern-section">
         <div class="container">
-          <h2>Watch FeedMe in Action</h2>
-          <div class="section-content">
-            <div class="demo-video">
-              <div class="video-placeholder">
-                <div>
-                  <p>📹 Demo Video Placeholder</p>
-                  <p style="font-size: 0.9rem; margin-top: 10px">
-                    Upload your demo video here
-                  </p>
-                </div>
+          <h2 data-en="Frequently Asked Questions" data-bm="Soalan Lazim" data-zh="常见问题"><span class="highlight-orange" data-en="Frequently" data-bm="Soalan" data-zh="常见">Frequently</span> <span data-en="Asked Questions" data-bm="Lazim" data-zh="问题">Asked Questions</span></h2>
+          <p class="section-subtitle" data-en="Find answers to common queries about FeedMe POS." data-bm="Cari jawapan kepada soalan lazim tentang FeedMe POS." data-zh="查找关于 FeedMe POS 的常见问题解答。">Find answers to common queries about FeedMe POS.</p>
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3 data-en="How much does FeedMe POS cost?" data-bm="Berapakah harga FeedMe POS?" data-zh="FeedMe POS 多少錢？">How much does FeedMe POS cost?</h3>
+                <span class="faq-toggle">+</span>
               </div>
-              <p class="video-instructions">
-                Replace this placeholder with your actual demo video to showcase
-                FeedMe's features and capabilities.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Products Section -->
-      <section id="products" class="section">
-        <div class="container">
-          <h2>Our Products & Features</h2>
-          <div class="products-grid">
-            <div class="product-card">
-              <a href="#" class="product-image">
-                <div>
-                  <p>🖥️ POS Terminal</p>
-                  <p style="font-size: 0.8rem">Click to learn more</p>
-                </div>
-              </a>
-              <div class="product-content">
-                <h3 class="product-title">POS Terminal</h3>
-                <p class="product-description">
-                  Our flagship POS terminal combines sleek design with powerful
-                  functionality. Features include touch-screen interface,
-                  barcode scanning, receipt printing, and seamless payment
-                  processing integration.
-                </p>
+              <div class="faq-answer">
+                <p data-en="We offer flexible pricing plans starting from RM 299/month. Contact us for a personalized quote based on your restaurant's specific needs and size." data-bm="Kami menawarkan pelan harga fleksibel bermula dari RM 299/bulan. Hubungi kami untuk sebut harga peribadi mengikut keperluan dan saiz restoran anda." data-zh="我們提供靈活的價格方案，起價為每月 RM 299。請聯繫我們，根據您的餐廳需求獲取個性化報價。">We offer flexible pricing plans starting from RM 299/month. Contact us for a personalized quote based on your restaurant's specific needs and size.</p>
               </div>
             </div>
-
-            <div class="product-card">
-              <a href="#" class="product-image">
-                <div>
-                  <p>📱 Mobile App</p>
-                  <p style="font-size: 0.8rem">Click to learn more</p>
-                </div>
-              </a>
-              <div class="product-content">
-                <h3 class="product-title">Mobile POS App</h3>
-                <p class="product-description">
-                  Take orders on the go with our mobile POS application.
-                  Compatible with tablets and smartphones, this app allows your
-                  staff to process orders from anywhere in your restaurant.
-                </p>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3 data-en="Can I use FeedMe POS on my existing devices?" data-bm="Bolehkah saya menggunakan FeedMe POS pada peranti sedia ada?" data-zh="FeedMe POS 可以在我現有的設備上使用嗎？">Can I use FeedMe POS on my existing devices?</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p data-en="Yes! FeedMe POS works on tablets, smartphones, and computers. We also provide dedicated POS hardware if needed." data-bm="Ya! FeedMe POS berfungsi pada tablet, telefon pintar, dan komputer. Kami juga menyediakan perkakasan POS khusus jika diperlukan." data-zh="可以！FeedMe POS 支持平板、智能手機和電腦。如有需要，我們也提供專用 POS 硬件。">Yes! FeedMe POS works on tablets, smartphones, and computers. We also provide dedicated POS hardware if needed.</p>
               </div>
             </div>
-
-            <div class="product-card">
-              <a href="#" class="product-image">
-                <div>
-                  <p>📊 Analytics Dashboard</p>
-                  <p style="font-size: 0.8rem">Click to learn more</p>
-                </div>
-              </a>
-              <div class="product-content">
-                <h3 class="product-title">Analytics Dashboard</h3>
-                <p class="product-description">
-                  Gain valuable insights into your business performance with our
-                  comprehensive analytics dashboard. Track sales, inventory,
-                  customer behavior, and more with real-time reporting.
-                </p>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3 data-en="How long does it take to set up?" data-bm="Berapa lama masa pemasangan?" data-zh="安裝需要多長時間？">How long does it take to set up?</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p data-en="Most restaurants are up and running within 24-48 hours. Our team provides full training and support during the transition." data-bm="Kebanyakan restoran boleh beroperasi dalam masa 24-48 jam. Pasukan kami menyediakan latihan dan sokongan penuh semasa peralihan." data-zh="大多數餐廳可在24-48小時內上線。我們的團隊會在過渡期間提供全面培訓和支持。">Most restaurants are up and running within 24-48 hours. Our team provides full training and support during the transition.</p>
               </div>
             </div>
-
-            <div class="product-card">
-              <a href="#" class="product-image">
-                <div>
-                  <p>🛒 Inventory Management</p>
-                  <p style="font-size: 0.8rem">Click to learn more</p>
-                </div>
-              </a>
-              <div class="product-content">
-                <h3 class="product-title">Inventory Management</h3>
-                <p class="product-description">
-                  Keep track of your stock levels automatically with our
-                  intelligent inventory management system. Receive alerts for
-                  low stock, track usage patterns, and optimize your ordering
-                  process.
-                </p>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3 data-en="Is my data secure?" data-bm="Adakah data saya selamat?" data-zh="我的數據安全嗎？">Is my data secure?</h3>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p data-en="Absolutely! We use bank-level encryption and secure cloud storage. Your data is backed up automatically and protected 24/7." data-bm="Sudah tentu! Kami menggunakan penyulitan setaraf bank dan storan awan yang selamat. Data anda disandarkan secara automatik dan dilindungi 24/7." data-zh="絕對安全！我們採用銀行級加密和安全雲存儲，您的數據會自動備份並全天候保護。">Absolutely! We use bank-level encryption and secure cloud storage. Your data is backed up automatically and protected 24/7.</p>
               </div>
             </div>
-
-            <div class="product-card">
-              <a href="#" class="product-image">
-                <div>
-                  <p>💳 Payment Processing</p>
-                  <p style="font-size: 0.8rem">Click to learn more</p>
-                </div>
-              </a>
-              <div class="product-content">
-                <h3 class="product-title">Payment Processing</h3>
-                <p class="product-description">
-                  Accept all major credit cards, digital wallets, and
-                  contactless payments with our secure payment processing
-                  system. Fast, reliable, and PCI compliant.
-                </p>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3 data-en="Do you provide customer support?" data-bm="Adakah anda menyediakan sokongan pelanggan?" data-zh="你們提供客戶支持嗎？">Do you provide customer support?</h3>
+                <span class="faq-toggle">+</span>
               </div>
-            </div>
-
-            <div class="product-card">
-              <a href="#" class="product-image">
-                <div>
-                  <p>👥 Customer Management</p>
-                  <p style="font-size: 0.8rem">Click to learn more</p>
-                </div>
-              </a>
-              <div class="product-content">
-                <h3 class="product-title">Customer Management</h3>
-                <p class="product-description">
-                  Build lasting relationships with your customers through our
-                  CRM features. Track preferences, manage loyalty programs, and
-                  send targeted promotions to increase repeat business.
-                </p>
+              <div class="faq-answer">
+                <p data-en="Yes! We offer 24/7 customer support via phone, email, and WhatsApp. Our team is always ready to help you succeed." data-bm="Ya! Kami menawarkan sokongan pelanggan 24/7 melalui telefon, e-mel, dan WhatsApp. Pasukan kami sentiasa bersedia membantu anda berjaya." data-zh="是的！我們通過電話、電子郵件和 WhatsApp 提供 24/7 客戶支持。我們的團隊隨時為您的成功保駕護航。">Yes! We offer 24/7 customer support via phone, email, and WhatsApp. Our team is always ready to help you succeed.</p>
               </div>
             </div>
           </div>
@@ -209,28 +334,29 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="section">
+      <section id="contact" class="section modern-section">
         <div class="container">
-          <h2>Contact Us</h2>
+          <h2 data-en="Contact Us" data-bm="Hubungi Kami" data-zh="联系我们"><span class="highlight-orange" data-en="Contact" data-bm="Hubungi" data-zh="联系">Contact</span> <span data-en="Us" data-bm="Kami" data-zh="我们">Us</span></h2>
+          <p class="section-subtitle" data-en="We’re here to help you get started with FeedMe POS System." data-bm="Kami sedia membantu anda memulakan dengan FeedMe POS System." data-zh="我们随时为您提供 FeedMe POS 系统的启动支持。">We’re here to help you get started with FeedMe POS System.</p>
           <div class="section-content">
             <div class="contact-info">
               <div class="contact-details">
-                <h3>Get in Touch</h3>
-                <p>Ready to revolutionize your restaurant operations?</p>
-                <p>
-                  Our team is here to help you get started with FeedMe POS
-                  System.
-                </p>
-                <p>📧 Email: info@feedmepos.com</p>
-                <p>📞 Phone: +1 (555) 123-4567</p>
-                <p>📍 Address: 123 Restaurant Street, Food City, FC 12345</p>
+                <p data-en="Ready to revolutionize your restaurant operations?" data-bm="Bersedia untuk merevolusikan operasi restoran anda?" data-zh="準備好革新您的餐廳營運了嗎？">Ready to revolutionize your restaurant operations?</p>
+                <p data-en="Our team is here to help you get started with FeedMe POS System." data-bm="Pasukan kami sedia membantu anda memulakan dengan FeedMe POS System." data-zh="我們的團隊隨時為您提供 FeedMe POS 系統的啟動支持。">Our team is here to help you get started with FeedMe POS System.</p>
+                <p>📧 <span data-en="Email: " data-bm="Emel: " data-zh="郵箱：">Email: </span>hannz@hcom.my</a></p>
+                <p>📞 <span data-en="Phone: " data-bm="Telefon: " data-zh="電話：">Phone: </span>011-5508 3631</a></p>
+                <p><span data-en="Address: " data-bm="Alamat: " data-zh="地址：">Address: </span><a href="https://maps.app.goo.gl/nbYapDb9REp4LJMr7">No. 28, Jln M Raya 25, Taman Melaka Raya, 75000 Melaka</a></p>
+                <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.9182519193523!2d102.25356317447063!3d2.1846984583249074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1ee1d7f9f8bc3%3A0x87d26c9435f6c0ea!2sHcom%20Technology%20Sdn.%20Bhd.!5e0!3m2!1sen!2smy!4v1751950333281!5m2!1sen!2smy" width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
               </div>
               <a
-                href="https://linktr.ee/feedmepos"
+                href="https://wa.me/+601155083631?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20FeedMe%20POS%20System."
                 target="_blank"
                 class="contact-button"
-                >Contact Us Now</a
-              >
+                data-en="Contact Us Now"
+                data-bm="Hubungi Kami Sekarang"
+                data-zh="立即聯絡我們">Contact Us Now</a>
             </div>
           </div>
         </div>
@@ -243,21 +369,57 @@
         <div class="social-links">
           <p>
             <a href="https://www.instagram.com/restaurantpossytem/" target="_blank">
-              <span class="social-icon">📷</span>
-              <span class="social-text">Instagram</span>
+              <span class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" alt="Instagram" style="width: 20px; height: 20px;"></span>
+              <span class="social-text" data-en="Instagram" data-bm="Instagram" data-zh="Instagram">Instagram</span>
             </a>
           </p>
           <p>
             <a href="https://www.facebook.com/profile.php?id=61578083732398" target="_blank">
-              <span class="social-icon">📘</span>
-              <span class="social-text">Facebook</span>
+              <span class="social-icon"><img src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="Facebook" style="width: 20px; height: 20px;"></span>
+              <span class="social-text" data-en="Facebook" data-bm="Facebook" data-zh="Facebook">Facebook</span>
+            </a>
+          </p>
+          <p>
+            <a href="https://wa.me/+601155083631?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20FeedMe%20POS%20System." target="_blank">
+              <span class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp" style="width: 20px; height: 20px;">
+              </span>
+              <span class="social-text" data-en="Contact us on WhatsApp" data-bm="Hubungi kami di WhatsApp" data-zh="通過 WhatsApp 聯絡我們">Contact us on WhatsApp</span>
             </a>
           </p>
         </div>
-        <p>&copy; 2024 FeedMe POS System. All rights reserved.</p>
+        <p data-en="&copy; 2025 Restaurant POS System. All rights reserved." data-bm="&copy; 2025 Restaurant POS System. Hak cipta terpelihara." data-zh="&copy; 2025 餐廳 POS 系統。版權所有。">&copy; 2025 Restaurant POS System. All rights reserved.</p>
       </div>
     </footer>
     
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <a href="https://wa.me/+601155083631?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20FeedMe%20POS%20System." target="_blank" class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp" class="whatsapp-icon">
+        <span class="whatsapp-text">Chat Now</span>
+      </a>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const langSelect = document.getElementById('lang-select');
+      function updateLanguage(lang) {
+        document.querySelectorAll('[data-en]').forEach(el => {
+          if (lang === 'en') el.textContent = el.getAttribute('data-en');
+          else if (lang === 'bm') el.textContent = el.getAttribute('data-bm');
+          else if (lang === 'zh') el.textContent = el.getAttribute('data-zh');
+        });
+      }
+      // Initial load
+      if (langSelect) updateLanguage(langSelect.value);
+      // On change
+      if (langSelect) {
+        langSelect.addEventListener('change', function() {
+          updateLanguage(this.value);
+        });
+      }
+    });
+    </script>
   </body>
 </html>

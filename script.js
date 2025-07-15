@@ -54,14 +54,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Header background change on scroll
     const header = document.querySelector('header');
+    let lastScrollY = window.scrollY;
+    
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(102, 126, 234, 0.95)';
+        if (window.scrollY > lastScrollY && window.scrollY > 100) {
+            // Scrolling down
+            header.classList.add('hide-on-scroll');
+            header.style.background = 'linear-gradient(rgba(232, 104, 0, 1), rgba(255, 0, 0, 1))';
             header.style.backdropFilter = 'blur(10px)';
         } else {
-            header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            // Scrolling up
+            header.classList.remove('hide-on-scroll');
+            header.style.background = 'linear-gradient(rgba(0, 0, 0, 0.741), rgba(59, 59, 59, 0.8), url("img/website-banner.jpg")';
             header.style.backdropFilter = 'none';
         }
+        lastScrollY = window.scrollY;
     });
     
     // Animated counters for statistics
@@ -80,6 +87,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         updateCounter();
     }
+
+    // Animate statistics when they come into view
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseInt(entry.target.getAttribute('data-target'));
+                animateCounter(entry.target, target);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(stat => {
+        statsObserver.observe(stat);
+    });
     
     // Intersection Observer for scroll animations
     const observerOptions = {
@@ -170,8 +193,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Product Navigation Functionality
+    const productNavItems = document.querySelectorAll('.product-nav-item');
+    const productContents = document.querySelectorAll('.product-content');
+    
+    // Handle product navigation clicks
+    productNavItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            productNavItems.forEach(navItem => navItem.classList.remove('active'));
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Get target content
+            const productType = this.getAttribute('data-product');
+            const targetContent = document.getElementById(`${productType}-content`);
+            
+            if (targetContent) {
+                // Hide all product contents
+                productContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show target content
+                targetContent.classList.add('active');
+                
+                // Smooth scroll to products section
+                const productsSection = document.getElementById('products');
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = productsSection.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // FAQ Functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        });
+    });
+
     // Add click effects to buttons
-    document.querySelectorAll('.cta-button, .contact-button').forEach(button => {
+    document.querySelectorAll('.cta-button, .contact-button, .product-cta').forEach(button => {
         button.addEventListener('click', function(e) {
             // Create ripple effect
             const ripple = document.createElement('span');
@@ -260,58 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.width = scrollPercent + '%';
     });
     
-    // Add "back to top" button
-    const backToTop = document.createElement('button');
-    backToTop.innerHTML = '↑';
-    backToTop.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        font-size: 1.5rem;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 1000;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-    `;
-    document.body.appendChild(backToTop);
-    
-    // Show/hide back to top button
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTop.style.opacity = '1';
-            backToTop.style.visibility = 'visible';
-        } else {
-            backToTop.style.opacity = '0';
-            backToTop.style.visibility = 'hidden';
-        }
-    });
-    
-    // Back to top functionality
-    backToTop.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-    
-    // Add hover effect to back to top button
-    backToTop.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-3px)';
-        this.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.4)';
-    });
-    
-    backToTop.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = '0 4px 15px rgba(102, 126, 234, 0.3)';
-    });
+
     
     // Add loading animation
     window.addEventListener('load', function() {
@@ -417,6 +448,17 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.transform = 'translateY(0)';
         }, index * 300);
     });
+    
+    // Language Switcher
+    const langSelect = document.getElementById('lang-select');
+    if (langSelect) {
+        langSelect.addEventListener('change', function() {
+            const lang = this.value;
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + lang);
+            });
+        });
+    }
     
     console.log('FeedMe Landing Page - Interactive features loaded successfully!');
 });
