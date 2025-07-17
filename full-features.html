@@ -7,17 +7,54 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="img/feedme.png">
   <style>
+    body { background: #f7f7f7; }
     .features-header { text-align: center; margin: 48px 0 24px 0; }
-    .features-section { max-width: 900px; margin: 0 auto 48px auto; background: rgba(255,255,255,0.95); border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); padding: 36px 24px; }
-    .features-section h2 { color: #ff7a00; font-size: 2rem; margin-bottom: 18px; display: flex; align-items: center; gap: 12px; }
-    .features-list { list-style: none; padding: 0; margin: 0; }
-    .features-list li { margin-bottom: 16px; font-size: 1.15rem; line-height: 1.6; }
+    .features-header h1 { font-family: 'Segoe UI', 'Arial', sans-serif; font-size: 2.3rem; font-weight: 700; margin-bottom: 10px; }
+    .features-header p { color: #666; font-size: 1.1rem; }
+    .features-grid-section { max-width: 1100px; margin: 0 auto 48px auto; }
+    .features-grid-title { text-align: center; font-size: 2rem; font-family: 'Segoe UI', 'Arial', sans-serif; font-weight: 700; margin-bottom: 32px; color: #444; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+    .feature-card {
+      background: #fffbe7;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 28px 18px 22px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 260px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      border: 2.5px solid transparent;
+    }
+    .feature-card:hover {
+      box-shadow: 0 6px 32px rgba(255,122,0,0.13);
+      transform: translateY(-4px) scale(1.03);
+      border-color: #ffe0b2;
+    }
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.10));
+    }
+    .feature-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #ff7a00;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .feature-desc {
+      font-size: 1.02rem;
+      color: #444;
+      text-align: center;
+      line-height: 1.5;
+    }
     .back-link { display: inline-block; margin: 32px auto 0 auto; background: #ff7a00; color: #fff; padding: 12px 32px; border-radius: 32px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
     .back-link:hover { background: #ff9900; }
-    @media (max-width: 700px) { .features-section { padding: 18px 4vw; } }
+    @media (max-width: 700px) { .features-header { margin: 28px 0 12px 0; } .features-grid-section { padding: 0 2vw; } }
   </style>
 </head>
-<body style="background: #f7f7f7;">
+<body>
   <header>
     <nav style="padding: 18px 0; text-align: center; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
       <a href="index.html" style="font-size: 1.2rem; color: #ff7a00; font-weight: 700; text-decoration: none;">&larr; Back to Home</a>
@@ -25,106 +62,90 @@
   </header>
   <main>
     <div class="features-header">
-      <h1>All Features of FeedMe POS</h1>
-      <p>Explore the complete set of tools and modules available in FeedMe POS.</p>
+      <h1>POS System Features</h1>
+      <p>Discover the most powerful and user-friendly features of FeedMe POS.</p>
     </div>
-    <section class="features-section">
-      <h2>🧾 Front-of-House Features</h2>
-      <ul class="features-list">
-        <li>Touchscreen POS Interface – fast, intuitive order-taking</li>
-        <li>QR Ordering System – scan-to-order via customer smartphone</li>
-        <li>Self-Service Kiosk (Optional) – for counterless ordering</li>
-        <li>Table Management – floor plan setup with table status</li>
-        <li>Split Bills / Merge Bills – easy for dine-in service</li>
-        <li>Multiple Payment Methods – cash, QRPay, eWallets, cards</li>
-        <li>Customizable Menus & Combos – by outlet, time, or category</li>
-        <li>Discounts, Vouchers & Promo Engine – per item or whole bill</li>
-        <li>Multilingual UI – English, Chinese, Malay</li>
-      </ul>
-    </section>
-    <section class="features-section">
-      <h2>👨‍🍳 Kitchen & Order Flow</h2>
-      <ul class="features-list">
-        <li>Kitchen Display System (KDS) – real-time order tracking</li>
-        <li>Auto Printing to Kitchen/Bar/Counter – by item group</li>
-        <li>Order Queue Management – manage peak-hour flow</li>
-        <li>Course Management – send dishes by order of serving</li>
-        <li>Preparation Time Monitoring – track delays</li>
-      </ul>
-    </section>
-    <section class="features-section">
-      <h2>📦 Inventory & Purchasing</h2>
-      <ul class="features-list">
-        <li>Ingredient-Level Stock Tracking – deduct based on sales</li>
-        <li>Low Stock Alerts – real-time notifications</li>
-        <li>Supplier Management – track POs and invoices</li>
-        <li>Central Kitchen & Warehouse Sync – for multi-outlet operations</li>
-        <li>Batch Inventory Upload – via CSV</li>
-        <li>Stock Adjustment / Waste Management</li>
-      </ul>
-    </section>
-    <section class="features-section">
-      <h2>📦 Online Ordering & Delivery</h2>
-      <ul class="features-list">
-        <li>GrabFood & Foodpanda Integration – orders sync to POS</li>
-        <li>Own QR Menu with Online Ordering – no app required</li>
-        <li>Online Payment Gateway Support – FPX, eWallets</li>
-        <li>Order Status Tracker – for customer transparency</li>
-      </ul>
-    </section>
-    <section class="features-section">
-      <h2>📊 Reports & Analytics</h2>
-      <ul class="features-list">
-        <li>Live Sales Dashboard – by outlet, time, category</li>
-        <li>Product Performance Reports – best/worst sellers</li>
-        <li>Staff Sales Tracking</li>
-        <li>Stock Usage Reports</li>
-        <li>Customer Visit Frequency & Spend</li>
-        <li>Daily Closing Reports – with cash reconciliation</li>
-        <li>Export to Excel / PDF</li>
-      </ul>
-    </section>
-    <section class="features-section">
-      <h2>🧑‍💼 Customer & Staff Management</h2>
-      <ul class="features-list">
-        <li>Membership System – points, tiers, loyalty tracking</li>
-        <li>Digital Stamps / Cashback System</li>
-        <li>Customer CRM Data – birthdays, favorites, spend patterns</li>
-        <li>Multi-Role User Access Control – manager vs staff vs cashier</li>
-        <li>Clock In/Out Time Tracking</li>
-        <li>Attendance Reports</li>
-      </ul>
-    </section>
-    <section class="features-section">
-      <h2>🛠 System Features</h2>
-      <ul class="features-list">
-        <li>Offline Mode – works during internet outage</li>
-        <li>Cloud Sync – real-time updates across devices</li>
-        <li>Multi-Outlet Management – centralized control panel</li>
-        <li>Multi-Device Support – tablet, phone, or desktop</li>
-        <li>Printable Receipts – with custom branding</li>
-        <li>Multiple Language Support</li>
-        <li>Audit Trail & Logs – for security and tracking</li>
-      </ul>
-    </section>
-    <section class="features-section">
-      <h2>📱 Mobile Access & Alerts</h2>
-      <ul class="features-list">
-        <li>Mobile Admin Dashboard – for owner-level tracking</li>
-        <li>Live Sales Notifications</li>
-        <li>Auto Alerts for Stock, Voids, Refunds</li>
-        <li>WhatsApp Support Integration (optional)</li>
-      </ul>
-    </section>
-    <section class="features-section">
-      <h2>✅ Add-Ons / Integrations</h2>
-      <ul class="features-list">
-        <li>Payment Gateway Integration – eGHL, iPay88, RazerPay</li>
-        <li>Accounting Integration – export for QuickBooks / SQL</li>
-        <li>Customer Feedback Forms</li>
-        <li>Loyalty Card Printing</li>
-        <li>Third-Party Loyalty App Sync (some versions)</li>
-      </ul>
+    <section class="features-grid-section">
+      <div class="features-grid-title">Front-of-House Features</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🖥️</div><div class="feature-title">Touchscreen POS Interface</div><div class="feature-desc">Fast, intuitive order-taking</div></div>
+        <div class="feature-card"><div class="feature-icon">📱</div><div class="feature-title">QR Ordering System</div><div class="feature-desc">Scan-to-order via customer smartphone</div></div>
+        <div class="feature-card"><div class="feature-icon">🧑‍💼</div><div class="feature-title">Self-Service Kiosk (Optional)</div><div class="feature-desc">For counterless ordering</div></div>
+        <div class="feature-card"><div class="feature-icon">🪑</div><div class="feature-title">Table Management</div><div class="feature-desc">Floor plan setup with table status</div></div>
+        <div class="feature-card"><div class="feature-icon">➗</div><div class="feature-title">Split Bills / Merge Bills</div><div class="feature-desc">Easy for dine-in service</div></div>
+        <div class="feature-card"><div class="feature-icon">💳</div><div class="feature-title">Multiple Payment Methods</div><div class="feature-desc">Cash, QRPay, eWallets, cards</div></div>
+        <div class="feature-card"><div class="feature-icon">🍔</div><div class="feature-title">Customizable Menus & Combos</div><div class="feature-desc">By outlet, time, or category</div></div>
+        <div class="feature-card"><div class="feature-icon">🏷️</div><div class="feature-title">Discounts, Vouchers & Promo Engine</div><div class="feature-desc">Per item or whole bill</div></div>
+        <div class="feature-card"><div class="feature-icon">🌐</div><div class="feature-title">Multilingual UI</div><div class="feature-desc">English, Chinese, Malay</div></div>
+      </div>
+      <div class="features-grid-title">Kitchen & Order Flow</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">👨‍🍳</div><div class="feature-title">Kitchen Display System (KDS)</div><div class="feature-desc">Real-time order tracking</div></div>
+        <div class="feature-card"><div class="feature-icon">🖨️</div><div class="feature-title">Auto Printing to Kitchen/Bar/Counter</div><div class="feature-desc">By item group</div></div>
+        <div class="feature-card"><div class="feature-icon">⏳</div><div class="feature-title">Order Queue Management</div><div class="feature-desc">Manage peak-hour flow</div></div>
+        <div class="feature-card"><div class="feature-icon">🍽️</div><div class="feature-title">Course Management</div><div class="feature-desc">Send dishes by order of serving</div></div>
+        <div class="feature-card"><div class="feature-icon">⏱️</div><div class="feature-title">Preparation Time Monitoring</div><div class="feature-desc">Track delays</div></div>
+      </div>
+      <div class="features-grid-title">Inventory & Purchasing</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">📦</div><div class="feature-title">Ingredient-Level Stock Tracking</div><div class="feature-desc">Deduct based on sales</div></div>
+        <div class="feature-card"><div class="feature-icon">🚨</div><div class="feature-title">Low Stock Alerts</div><div class="feature-desc">Real-time notifications</div></div>
+        <div class="feature-card"><div class="feature-icon">🤝</div><div class="feature-title">Supplier Management</div><div class="feature-desc">Track POs and invoices</div></div>
+        <div class="feature-card"><div class="feature-icon">🏭</div><div class="feature-title">Central Kitchen & Warehouse Sync</div><div class="feature-desc">For multi-outlet operations</div></div>
+        <div class="feature-card"><div class="feature-icon">⬆️</div><div class="feature-title">Batch Inventory Upload</div><div class="feature-desc">Via CSV</div></div>
+        <div class="feature-card"><div class="feature-icon">📝</div><div class="feature-title">Stock Adjustment / Waste Management</div><div class="feature-desc">Easy tracking and control</div></div>
+      </div>
+      <div class="features-grid-title">Online Ordering & Delivery</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🛵</div><div class="feature-title">GrabFood & Foodpanda Integration</div><div class="feature-desc">Orders sync to POS</div></div>
+        <div class="feature-card"><div class="feature-icon">📲</div><div class="feature-title">Own QR Menu with Online Ordering</div><div class="feature-desc">No app required</div></div>
+        <div class="feature-card"><div class="feature-icon">💸</div><div class="feature-title">Online Payment Gateway Support</div><div class="feature-desc">FPX, eWallets</div></div>
+        <div class="feature-card"><div class="feature-icon">🔔</div><div class="feature-title">Order Status Tracker</div><div class="feature-desc">For customer transparency</div></div>
+      </div>
+      <div class="features-grid-title">Reports & Analytics</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">📊</div><div class="feature-title">Live Sales Dashboard</div><div class="feature-desc">By outlet, time, category</div></div>
+        <div class="feature-card"><div class="feature-icon">🏆</div><div class="feature-title">Product Performance Reports</div><div class="feature-desc">Best/worst sellers</div></div>
+        <div class="feature-card"><div class="feature-icon">👥</div><div class="feature-title">Staff Sales Tracking</div><div class="feature-desc">Monitor staff performance</div></div>
+        <div class="feature-card"><div class="feature-icon">📉</div><div class="feature-title">Stock Usage Reports</div><div class="feature-desc">Track inventory usage</div></div>
+        <div class="feature-card"><div class="feature-icon">🔁</div><div class="feature-title">Customer Visit Frequency & Spend</div><div class="feature-desc">Loyalty and analytics</div></div>
+        <div class="feature-card"><div class="feature-icon">🧾</div><div class="feature-title">Daily Closing Reports</div><div class="feature-desc">With cash reconciliation</div></div>
+        <div class="feature-card"><div class="feature-icon">📤</div><div class="feature-title">Export to Excel / PDF</div><div class="feature-desc">Easy data export</div></div>
+      </div>
+      <div class="features-grid-title">Customer & Staff Management</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🎫</div><div class="feature-title">Membership System</div><div class="feature-desc">Points, tiers, loyalty tracking</div></div>
+        <div class="feature-card"><div class="feature-icon">💰</div><div class="feature-title">Digital Stamps / Cashback System</div><div class="feature-desc">Reward your customers</div></div>
+        <div class="feature-card"><div class="feature-icon">📇</div><div class="feature-title">Customer CRM Data</div><div class="feature-desc">Birthdays, favorites, spend patterns</div></div>
+        <div class="feature-card"><div class="feature-icon">🔐</div><div class="feature-title">Multi-Role User Access Control</div><div class="feature-desc">Manager vs staff vs cashier</div></div>
+        <div class="feature-card"><div class="feature-icon">⏰</div><div class="feature-title">Clock In/Out Time Tracking</div><div class="feature-desc">Attendance management</div></div>
+        <div class="feature-card"><div class="feature-icon">📝</div><div class="feature-title">Attendance Reports</div><div class="feature-desc">Staff attendance analytics</div></div>
+      </div>
+      <div class="features-grid-title">System Features</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🛠️</div><div class="feature-title">Offline Mode</div><div class="feature-desc">Works during internet outage</div></div>
+        <div class="feature-card"><div class="feature-icon">☁️</div><div class="feature-title">Cloud Sync</div><div class="feature-desc">Real-time updates across devices</div></div>
+        <div class="feature-card"><div class="feature-icon">🏢</div><div class="feature-title">Multi-Outlet Management</div><div class="feature-desc">Centralized control panel</div></div>
+        <div class="feature-card"><div class="feature-icon">📱</div><div class="feature-title">Multi-Device Support</div><div class="feature-desc">Tablet, phone, or desktop</div></div>
+        <div class="feature-card"><div class="feature-icon">🖨️</div><div class="feature-title">Printable Receipts</div><div class="feature-desc">With custom branding</div></div>
+        <div class="feature-card"><div class="feature-icon">🌏</div><div class="feature-title">Multiple Language Support</div><div class="feature-desc">Serve a diverse audience</div></div>
+        <div class="feature-card"><div class="feature-icon">📝</div><div class="feature-title">Audit Trail & Logs</div><div class="feature-desc">For security and tracking</div></div>
+      </div>
+      <div class="features-grid-title">Mobile Access & Alerts</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">📱</div><div class="feature-title">Mobile Admin Dashboard</div><div class="feature-desc">Owner-level tracking</div></div>
+        <div class="feature-card"><div class="feature-icon">🔔</div><div class="feature-title">Live Sales Notifications</div><div class="feature-desc">Stay updated in real time</div></div>
+        <div class="feature-card"><div class="feature-icon">🚨</div><div class="feature-title">Auto Alerts for Stock, Voids, Refunds</div><div class="feature-desc">Instant notifications</div></div>
+        <div class="feature-card"><div class="feature-icon">💬</div><div class="feature-title">WhatsApp Support Integration (optional)</div><div class="feature-desc">Easy customer support</div></div>
+      </div>
+      <div class="features-grid-title">Add-Ons / Integrations</div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">💳</div><div class="feature-title">Payment Gateway Integration</div><div class="feature-desc">eGHL, iPay88, RazerPay</div></div>
+        <div class="feature-card"><div class="feature-icon">📒</div><div class="feature-title">Accounting Integration</div><div class="feature-desc">Export for QuickBooks / SQL</div></div>
+        <div class="feature-card"><div class="feature-icon">📝</div><div class="feature-title">Customer Feedback Forms</div><div class="feature-desc">Collect valuable feedback</div></div>
+        <div class="feature-card"><div class="feature-icon">💳</div><div class="feature-title">Loyalty Card Printing</div><div class="feature-desc">Physical loyalty cards</div></div>
+        <div class="feature-card"><div class="feature-icon">🔗</div><div class="feature-title">Third-Party Loyalty App Sync</div><div class="feature-desc">Some versions supported</div></div>
+      </div>
     </section>
     <div style="text-align:center;">
       <a href="index.html" class="back-link">&larr; Back to Home</a>
