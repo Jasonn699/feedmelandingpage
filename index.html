@@ -26,7 +26,7 @@
           </div>
           <nav>
             <ul class="nav-links">
-              <li><a href="#demo" data-en="Demo" data-bm="Demo" data-zh="演示">Demo</a></li>
+              <li><a href="#" id="demo-nav-link" data-en="Demo" data-bm="Demo" data-zh="演示">Demo</a></li>
               <li><a href="#features" data-en="Features" data-bm="Ciri Produk " data-zh="產品功能">Products</a></li>
               <li><a href="#testimonials" data-en="Testimonials" data-bm="Testimoni" data-zh="客戶評價">Testimonials</a></li>
               <li><a href="#faq" data-en="FAQ" data-bm="Soalan Lazim" data-zh="常見問題">FAQ</a></li>
@@ -55,6 +55,16 @@
         <a href="#contact" class="cta-button" data-en="Get Started Today" data-bm="Mulakan Hari Ini" data-zh="立即開始">Get Started Today</a>
       </div>
     </section>
+
+      <!-- Video Popup Modal -->
+      <div id="video-popup-modal" class="video-modal">
+        <div class="video-modal-content">
+          <span class="video-modal-close">&times;</span>
+          <div class="video-container">
+            <iframe id="demo-video-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
 
       <!-- Statistics Section -->
       <section id="stats" class="section">
@@ -116,6 +126,7 @@
         </div>
       </section>
       <script src="feature-carousel.js"></script>
+      <script src="video-popup.js"></script></script>
 
       <!-- Testimonials Section -->
       <section id="testimonials" class="section modern-section">
